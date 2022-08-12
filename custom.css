@@ -4,8 +4,6 @@ body {
   text-transform: uppercase;
 }
 
-/* <576px breaking */
-
 .normalcase {
   text-transform: none;
 }
