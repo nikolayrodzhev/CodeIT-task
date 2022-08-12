@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="custom.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <script defer src="/script.js"></script>
+    <title>My Wishlist</title>
+  </head>
+  <body>
+    <header>
+      <div class="container header">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"
+              ><span class="normalcase logo-code"
+                ><span class="underline">C</span>ode</span
+              ><span class="logo-IT">IT</span>
+              <span class="logo-store">Store</span></a
+            >
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="collapse navbar-collapse end"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    All Brands
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Brand</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another brand</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Some other brand</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Latest</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Featured</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    onclick="searchButtonHadnler(event)"
+                    class="nav-link"
+                    href=""
+                    ><i class="bi bi-search"></i
+                  ></a>
+                </li>
+                <li class="nav-item">
+                  <button data-count="2" class="nav-link cart">
+                    <i class="bi bi-bag-fill"></i> $
+                    <span class="cart-price">460.00</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="background-img">
+        <div class="container wishlist">
+          <h2>My Wishlist</h2>
+          <span
+            ><a href="#">Home</a> <i class="bi bi-chevron-right"></i>
+            <a href="#" class="lighter">My Wishlist</a></span
+          >
+        </div>
+      </div>
+      <div class="container">
+        <div class="search-container">
+          <input
+            onchange="searchHandler(event)"
+            autocomplete="off"
+            id="search"
+            type="search"
+            placeholder="Search for a product"
+          />
+          <button onclick="clearListHandler(event)" disabled class="clear-btn">
+            Clear List
+          </button>
+        </div>
+        <div class="products">
+          <div id="row-1" class="row"></div>
+          <div id="row-2" class="row mb-0"></div>
+        </div>
+        <nav>
+          <ul class="pagination justify-content-center gap-2"></ul>
+        </nav>
+      </div>
+      <div class="features">
+        <div class="features-inner container d-flex justify-content-between">
+          <div class="feature">
+            <i class="bi bi-hand-thumbs-up-fill"></i>
+            <a href="#" class="feature-text">
+              <h5>Full Warrenty</h5>
+              <p class="normalcase">Read About Our Warrenty</p>
+            </a>
+          </div>
+          <div class="feature">
+            <i class="bi bi-truck"></i>
+            <a href="#" class="feature-text">
+              <h5>Express Shipping</h5>
+              <p class="normalcase">Local & International Shipping</p>
+            </a>
+          </div>
+          <div class="feature">
+            <i class="bi bi-chat-dots-fill"></i>
+            <a href="#" class="feature-text">
+              <h5>Mobile Blog</h5>
+              <p class="normalcase">Discuss Your Favourite Phone</p>
+            </a>
+          </div>
+          <div class="feature">
+            <i class="bi bi-headphones"></i>
+            <a href="#" class="feature-text">
+              <h5>24/7 Support</h5>
+              <p class="normalcase">Get Full Support via Chat</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="background footer">
+        <div class="container">
+          <div class="subscribe-container d-flex justify-content-between">
+            <label for="email"
+              >Subscribe to latest smarthphones news & great deals we
+              offer</label
+            >
+            <input
+              onkeyup="emailSubmitHandler(event)"
+              autocomplete="off"
+              class="subscribe-input col-4"
+              type="email"
+              id="email"
+              placeholder="Enter your email address ...  "
+            />
+            <div class="invalid-feedback">Please provide a valid email.</div>
+            <div class="success col-4 hidden">
+              Thanks for your subscription.
+            </div>
+            <ul class="d-flex social-btns">
+              <li class="social-item active">
+                <button
+                  onclick="changeActiveSocialBtn(event)"
+                  class="social-btn"
+                >
+                  <i class="bi bi-twitter"></i>
+                </button>
+              </li>
+              <li class="social-item">
+                <button
+                  onclick="changeActiveSocialBtn(event)"
+                  class="social-btn"
+                >
+                  <i class="bi bi-facebook"></i>
+                </button>
+              </li>
+              <li class="social-item">
+                <button
+                  onclick="changeActiveSocialBtn(event)"
+                  class="social-btn"
+                >
+                  <i class="bi bi-linkedin"></i>
+                </button>
+              </li>
+              <li class="social-item">
+                <button
+                  onclick="changeActiveSocialBtn(event)"
+                  class="social-btn"
+                >
+                  <i class="bi bi-google"></i><b>+</b>
+                </button>
+              </li>
+              <li class="social-item">
+                <button
+                  onclick="changeActiveSocialBtn(event)"
+                  class="social-btn"
+                >
+                  <i class="bi bi-pinterest"></i>
+                </button>
+              </li>
+              <li class="social-item">
+                <button
+                  onclick="changeActiveSocialBtn(event)"
+                  class="social-btn"
+                >
+                  <i class="bi bi-youtube"></i>
+                </button>
+              </li>
+              <li class="social-item">
+                <button
+                  onclick="changeActiveSocialBtn(event)"
+                  class="social-btn last-btn"
+                >
+                  <i class="bi bi-wifi"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright-container">
+          <div
+            class="container d-flex align-items-center justify-content-between"
+          >
+            <p>
+              Copyright &copy; 2015 <a href="#">CodeITStore</a> All rights
+              reserved.
+            </p>
+            <ul class="d-flex">
+              <li>
+                <img
+                  class="img-payment"
+                  src="/img/payment-1.png"
+                  alt="Visa Electron"
+                />
+              </li>
+              <li>
+                <img
+                  class="img-payment"
+                  src="/img/payment-2.png"
+                  alt="PayPal"
+                />
+              </li>
+              <li>
+                <img class="img-payment" src="/img/payment-3.png" alt="Visa" />
+              </li>
+              <li>
+                <img
+                  class="img-payment"
+                  src="/img/payment-4.webp"
+                  alt="Mastercard"
+                />
+              </li>
+              <li>
+                <img
+                  class="img-payment"
+                  src="/img/payment-5.png"
+                  alt="Maestro"
+                />
+              </li>
+              <li>
+                <img
+                  class="img-payment img-last"
+                  src="/img/payment-6.png"
+                  alt="Discover"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
